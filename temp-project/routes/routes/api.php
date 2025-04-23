@@ -8,15 +8,11 @@ use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\OrderController;
 use App\Http\Controllers\API\AdminController;
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/', function () {
+    return response()->json(['message' => 'API is working!']);
 });
 
 /* Public Routes */
-
-Route::get('/', function () {
-    return response()->json(['status' => 'API is working!']);
-});
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
