@@ -1,0 +1,8 @@
+DB::table('users')->insert(['name' => 'Admin','email' => 'admin@admin.com','password' => Hash::make('admin123!'),'is_admin' => true,'created_at' => now(),'updated_at' => now()]);
+
+
+User::where('email', 'admin@admin.com')->first();
+
+DB::table('users') ->where('email', 'admin@admin.com') ->update(['password' => Hash::make('admin123!')]);
+
+$user = DB::table('users')->where('email', 'admin@admin.com')->first(); dd($user->password);

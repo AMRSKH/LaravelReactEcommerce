@@ -1,0 +1,46 @@
+API Test
++Admin
+- POST Ad Register | http://localhost:8000/api/register | {"name": "Admin1","email": "admin1@admin.com","password": "admin123!","password_confirmation": "admin123!","is_admin": true,"admin_secret": "a9b2c1d4e5f678901234567890abcdef"}
+
+Result | {
+	"success": true,
+	"data": {
+		"user": {
+			"name": "Admin1",
+			"email": "admin1@admin.com",
+			"is_admin": true,
+			"updated_at": "2025-04-23T22:16:48.000000Z",
+			"created_at": "2025-04-23T22:16:48.000000Z",
+			"id": 2
+		},
+		"token": "4|Duq0bRv4vQI7fKXwDsCxoQUBBKavsyJqg43XzY1J37601104",
+		"token_type": "Bearer"
+	}
+}
+- POST Ad Login | http://localhost:8000/api/login | {"email":"admin1@admin.com","password":"admin123!"}
+
+Result | {
+	"user": {
+		"id": 2,
+		"name": "Admin1",
+		"email": "admin1@admin.com",
+		"email_verified_at": null,
+		"created_at": "2025-04-23T22:16:48.000000Z",
+		"updated_at": "2025-04-23T22:16:48.000000Z",
+		"is_admin": true
+	},
+	"token": "5|fmuekQFl4ZQMnVJxEV6gWJqBAkLhyWNxr3tMPyFW209b8cfd"
+}
+
+- GET Ad User | http://localhost:8000/api/user | Auth > Bearer Token 4|Duq0bRv4vQI7fKXwDsCxoQUBBKavsyJqg43XzY1J37601104
+
+Result | {
+	"id": 2,
+	"name": "Admin1",
+	"email": "admin1@admin.com",
+	"email_verified_at": null,
+	"created_at": "2025-04-23T22:16:48.000000Z",
+	"updated_at": "2025-04-23T22:16:48.000000Z",
+	"is_admin": true
+}
+
