@@ -1,0 +1,68 @@
+ជំហានទី ១ ចូលទៅទីតាំងណាមួយដែលចង់ទុក Project 
+Example: Documents Folder បើកក្នុង Folder ក្នុង cmd and run
+
+
+```
+git clone https://github.com/AMRSKH/LaravelReactEcommerce.git
+```
+
+
+បន្ទាប់មក Rename LaravelReactEcommerce ទៅឈ្មោះផ្សេង Example : LaravelEcommerce
+ជំហានទី ២
+
+
+```
+cd LaravelEcommerce```
+
+
+
+បន្ទាប់មក Rename ecommerce-backend, ecommerce-frontend ទៅឈ្មោះផ្សេង Example : backend, frontend
+ជំហានទី 3 បើក Cmd ថ្មីសម្រាប់ backend ហើយចូលមក Folder ដដែល រួច ចូល Folder backend វីធីធ្វើ Run this 
+
+```
+cd Documents
+cd LaravelEcommerce
+cd backend
+```
+
+
+ជំហានទី 4 បើក Cmd ថ្មីសម្រាប់ frontend ហើយចូលមក Folder ដដែល រួច ចូល Folder frontend វីធីធ្វើ Run this 
+
+
+```
+cd Documents
+cd LaravelEcommerce
+cd backend
+```
+
+
+ជំហានទី 5 ក្នុង Cmd backend run
+Next 
+
+```
+cp .env.example .env
+```
+
+
+Next 
+
+
+```
+php artisan key:generate
+```
+
+
+Next ចូល .env file  កែ DB Conn 
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ឈ្មោះ db បង្កើតក្នុង PHP my admin 
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+
+កែរួច Save files 
+កុំភ្លេចចូលទៅបង្កើត DB
