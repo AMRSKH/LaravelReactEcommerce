@@ -10,10 +10,16 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
+    use App\Http\Resources\ProductResource;
+
     public function index()
     {
-        //
+        return ProductResource::collection(
+            Product::with('category')->latest()->paginate(12)
+        );
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -26,9 +32,9 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Product $product)
     {
-        //
+        return new ProductResource($product->load('category'));
     }
 
     /**

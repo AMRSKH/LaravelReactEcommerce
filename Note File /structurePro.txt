@@ -1,0 +1,216 @@
+```.
+├── ecommerce-backend
+│   ├── app
+│   │   ├── Http
+│   │   │   ├── Controllers
+│   │   │   │   ├── API
+│   │   │   │   │   ├── AdminController.php
+│   │   │   │   │   ├── AuthController.php
+│   │   │   │   │   ├── CategoryController.php
+│   │   │   │   │   ├── OrderController.php
+│   │   │   │   │   └── ProductController.php
+│   │   │   │   ├── Auth
+│   │   │   │   │   ├── ConfirmPasswordController.php
+│   │   │   │   │   ├── ForgotPasswordController.php
+│   │   │   │   │   ├── LoginController.php
+│   │   │   │   │   ├── RegisterController.php
+│   │   │   │   │   ├── ResetPasswordController.php
+│   │   │   │   │   └── VerificationController.php
+│   │   │   │   └── Controller.php
+│   │   │   ├── Kernel.php
+│   │   │   ├── Middleware
+│   │   │   │   └── AdminMiddleware.php
+│   │   │   └── Resources
+│   │   │       └── ProductResource.php
+│   │   ├── Models
+│   │   │   ├── Category.php
+│   │   │   ├── OrderItem.php
+│   │   │   ├── Order.php
+│   │   │   ├── Product.php
+│   │   │   └── User.php
+│   │   └── Providers
+│   │       ├── AppServiceProvider.php
+│   │       └── RateLimiterServiceProvider.php
+│   ├── bootstrap
+│   │   ├── app.php
+│   │   ├── cache
+│   │   │   ├── packages.php
+│   │   │   └── services.php
+│   │   └── providers.php
+│   ├── composer.json
+│   ├── config
+│   │   ├── app.php
+│   │   ├── auth.php
+│   │   ├── cache.php
+│   │   ├── cors.php
+│   │   ├── database.php
+│   │   ├── filesystems.php
+│   │   ├── logging.php
+│   │   ├── mail.php
+│   │   ├── queue.php
+│   │   ├── sanctum.php
+│   │   ├── services.php
+│   │   └── session.php
+│   ├── database
+│   │   ├── factories
+│   │   │   └── UserFactory.php
+│   │   ├── migrations
+│   │   │   ├── 0001_01_01_000000_create_users_table.php
+│   │   │   ├── 0001_01_01_000001_create_cache_table.php
+│   │   │   ├── 0001_01_01_000002_create_jobs_table.php
+│   │   │   ├── 2025_04_23_174620_create_personal_access_tokens_table.php
+│   │   │   ├── 2025_04_23_174730_create_categories_table.php
+│   │   │   ├── 2025_04_23_174731_create_products_table.php
+│   │   │   ├── 2025_04_23_174732_create_orders_table.php
+│   │   │   ├── 2025_04_23_174733_create_order_items_table.php
+│   │   │   ├── 2025_04_23_175053_add_is_admin_to_users_table.php
+│   │   │   └── 2025_04_23_200950_add_is_admin_to_users_table.php
+│   │   └── seeders
+│   │       └── DatabaseSeeder.php
+│   ├── package.json
+│   ├── routes
+│   │   ├── api.php
+│   │   ├── console.php
+│   │   └── web.php
+│   ├── tests
+│   │   ├── Feature
+│   │   │   └── ExampleTest.php
+│   │   ├── TestCase.php
+│   │   └── Unit
+│   │       └── ExampleTest.php
+│   └── vite.config.js
+├── ecommerce-frontend
+│   ├── package.json
+│   └── src
+│       ├── App.js
+│       ├── App.test.js
+│       ├── components
+│       │   ├── admin
+│       │   │   └── ProductForm.js
+│       │   ├── auth
+│       │   │   └── AdminRegister.js
+│       │   └── common
+│       │       ├── AdminRoute.js
+│       │       ├── Navbar.js
+│       │       └── PrivateRoute.js
+│       ├── context
+│       │   └── AuthContext.js
+│       ├── index.js
+│       ├── pages
+│       │   ├── admin
+│       │   │   ├── Dashboard.js
+│       │   │   ├── Orders.js
+│       │   │   ├── Products.js
+│       │   │   └── Users.js
+│       │   ├── CartPage.js
+│       │   ├── CheckoutPage.js
+│       │   ├── HomePage.js
+│       │   ├── LoginPage.js
+│       │   ├── ProductPage.js
+│       │   └── RegisterPage.js
+│       ├── products
+│       ├── reportWebVitals.js
+│       ├── services
+│       │   ├── api.js
+│       │   └── auth.js
+│       ├── setupTests.js
+│       └── utils
+└── temp-project
+    ├── app
+    │   ├── app
+    │   │   ├── Http
+    │   │   │   ├── Controllers
+    │   │   │   │   ├── API
+    │   │   │   │   │   ├── AdminController.php
+    │   │   │   │   │   ├── AuthController.php
+    │   │   │   │   │   ├── CategoryController.php
+    │   │   │   │   │   ├── OrderController.php
+    │   │   │   │   │   └── ProductController.php
+    │   │   │   │   ├── Auth
+    │   │   │   │   │   ├── ConfirmPasswordController.php
+    │   │   │   │   │   ├── ForgotPasswordController.php
+    │   │   │   │   │   ├── LoginController.php
+    │   │   │   │   │   ├── RegisterController.php
+    │   │   │   │   │   ├── ResetPasswordController.php
+    │   │   │   │   │   └── VerificationController.php
+    │   │   │   │   └── Controller.php
+    │   │   │   ├── Kernel.php
+    │   │   │   └── Middleware
+    │   │   │       └── AdminMiddleware.php
+    │   │   ├── Models
+    │   │   │   ├── Category.php
+    │   │   │   ├── OrderItem.php
+    │   │   │   ├── Order.php
+    │   │   │   ├── Product.php
+    │   │   │   └── User.php
+    │   │   └── Providers
+    │   │       ├── AppServiceProvider.php
+    │   │       └── RateLimiterServiceProvider.php
+    │   ├── Http
+    │   │   └── Controllers
+    │   │       └── Controller.php
+    │   ├── Models
+    │   │   └── User.php
+    │   └── Providers
+    │       └── AppServiceProvider.php
+    ├── bootstrap
+    │   ├── app.php
+    │   ├── cache
+    │   │   ├── packages.php
+    │   │   └── services.php
+    │   └── providers.php
+    ├── composer.json
+    ├── config
+    │   ├── app.php
+    │   ├── auth.php
+    │   ├── cache.php
+    │   ├── database.php
+    │   ├── filesystems.php
+    │   ├── logging.php
+    │   ├── mail.php
+    │   ├── queue.php
+    │   ├── services.php
+    │   └── session.php
+    ├── database
+    │   ├── database
+    │   │   ├── factories
+    │   │   │   └── UserFactory.php
+    │   │   ├── migrations
+    │   │   │   ├── 0001_01_01_000000_create_users_table.php
+    │   │   │   ├── 0001_01_01_000001_create_cache_table.php
+    │   │   │   ├── 0001_01_01_000002_create_jobs_table.php
+    │   │   │   ├── 2025_04_23_174620_create_personal_access_tokens_table.php
+    │   │   │   ├── 2025_04_23_174730_create_categories_table.php
+    │   │   │   ├── 2025_04_23_174731_create_products_table.php
+    │   │   │   ├── 2025_04_23_174732_create_orders_table.php
+    │   │   │   ├── 2025_04_23_174733_create_order_items_table.php
+    │   │   │   ├── 2025_04_23_175053_add_is_admin_to_users_table.php
+    │   │   │   └── 2025_04_23_200950_add_is_admin_to_users_table.php
+    │   │   └── seeders
+    │   │       └── DatabaseSeeder.php
+    │   ├── factories
+    │   │   └── UserFactory.php
+    │   ├── migrations
+    │   │   ├── 0001_01_01_000000_create_users_table.php
+    │   │   ├── 0001_01_01_000001_create_cache_table.php
+    │   │   └── 0001_01_01_000002_create_jobs_table.php
+    │   └── seeders
+    │       └── DatabaseSeeder.php
+    ├── package.json
+    ├── routes
+    │   ├── console.php
+    │   ├── routes
+    │   │   ├── api.php
+    │   │   ├── console.php
+    │   │   └── web.php
+    │   └── web.php
+    ├── tests
+    │   ├── Feature
+    │   │   └── ExampleTest.php
+    │   ├── TestCase.php
+    │   └── Unit
+    │       └── ExampleTest.php
+    └── vite.config.js
+
+64 directories, 149 files
+```

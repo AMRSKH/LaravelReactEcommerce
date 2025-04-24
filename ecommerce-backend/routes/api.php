@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::apiResource('products', ProductController::class)->only(['index', 'show']);
+Route::middleware('auth:sanctum')->apiResource('products', ProductController::class)->except(['index', 'show']);
 Route::apiResource('categories', CategoryController::class)->only(['index', 'show']);
 
 /* Authenticated Routes */
